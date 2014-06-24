@@ -1,4 +1,4 @@
-angular.module( 'tuto', ['ngRoute', "tuto.home"])
+angular.module( 'tuto', ['ngRoute', "tuto.home", "tuto.search"])
 
 .config(['$routeProvider',
   function($routeProvider) {
