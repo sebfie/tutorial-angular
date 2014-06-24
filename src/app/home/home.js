@@ -6,7 +6,7 @@ angular.module( 'tuto.home', [
   function($routeProvider) {
     $routeProvider.
       when('/home', {
-        templateUrl: 'js/app/home/home.tpl.html',
+        templateUrl: 'src/app/home/home.tpl.html',
         controller: 'HomeCtrl'
       })
   }
