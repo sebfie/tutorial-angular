@@ -1,5 +1,6 @@
 angular.module( 'tuto.home', [
-  'ngRoute'
+  'ngRoute',
+  'tuto.phone'
 ])
 
 .config(['$routeProvider',
@@ -15,7 +16,7 @@ angular.module( 'tuto.home', [
 /**
  * And of course we define a controller for our route.
  */
-.controller( 'HomeCtrl', ["$scope", function HomeController( $scope ) {
-
+.controller( 'HomeCtrl', ["$scope", "Phone", function HomeController( $scope, Phone ) {
+    $scope.results = Phone.query()
   }]
 )
