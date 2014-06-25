@@ -8,20 +8,25 @@
       </span>
     </div>
 
-
-    <div class="top10" search="" ng-model="brand">
-      <select multiple="" name="selection" id="selection" style="width:100%" class="populate select2-offscreen" tabindex="-1" >
-         <optgroup label="Android">
-             <option value="motorola">Motorola</option>
-             <option value="dell">Dell</option>
-             <option value="samsung">Samsung</option>
-             <option value="nexus">Nexus</option>
-             <option value="t-mobile">T-mobile</option>
-         </optgroup>
-         <optgroup label="Ios">
-             <option value="apple">Apple</option>
-         </optgroup>
-      </select>
+    <div class="row top10">
+      <div class="col-md-6" search="" ng-model="brand">
+        <select multiple="" name="selection" id="selection" style="width:100%" class="populate select2-offscreen" tabindex="-1" >
+           <optgroup label="Android">
+               <option value="motorola">Motorola</option>
+               <option value="dell">Dell</option>
+               <option value="samsung">Samsung</option>
+               <option value="nexus">Nexus</option>
+               <option value="t-mobile">T-mobile</option>
+           </optgroup>
+           <optgroup label="Ios">
+               <option value="apple">Apple</option>
+           </optgroup>
+        </select>
+      </div>
+      <div class="col-md-6" isolated_search="">
+        Isolated scope :
+        {{ query }}
+      </div>
     </div>
 
     <div class="row top10">

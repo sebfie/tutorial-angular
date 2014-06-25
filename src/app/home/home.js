@@ -25,7 +25,11 @@ angular.module( 'tuto.home', [
     $scope.$watch("brand", function(newValue){
       if (angular.isUndefined(newValue)) return;
 
-      $scope.events.push("We changed brand to " + newValue.join(","))
+      if (_.isEmpty(newValue)) {
+        $scope.events.push("We changed brand to []")
+      } else {
+        $scope.events.push("We changed brand to '" + newValue.join(",") + "'")
+      }
     });
 
     $scope.changeExampleOfWatchNeedTrue = function(){
