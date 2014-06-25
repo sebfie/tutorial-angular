@@ -1,36 +1,39 @@
 <div class="row" ng-controller="HomeCtrl">
   <div class="col-lg-12">
     <h1>What do you want to find ?</h1>
-<!--     <div class="input-group">
+    <div class="input-group top10">
       <input type="text" class="form-control" ng-model="query">
       <span class="input-group-btn">
         <button class="btn btn-default" type="button">Search!</button>
       </span>
-    </div> -->
+    </div>
 
 
-    <div search="" ng-model="query">
+    <div class="top10" search="" ng-model="brand">
       <select multiple="" name="selection" id="selection" style="width:100%" class="populate select2-offscreen" tabindex="-1" >
          <optgroup label="Android">
              <option value="motorola">Motorola</option>
              <option value="dell">Dell</option>
+             <option value="samsung">Samsung</option>
+             <option value="nexus">Nexus</option>
+             <option value="t-mobile">T-mobile</option>
          </optgroup>
          <optgroup label="Ios">
-             <option value="iphone">Iphone</option>
-             <option value="ipad">Ipad</option>
+             <option value="apple">Apple</option>
          </optgroup>
       </select>
     </div>
 
     <pre class="top10">
       Query : {{ query }}
+      Brands : {{ brand }}
     </pre>
 
   </div>
 
   <div class="col-lg-12">
     <ul class="results list-unstyled">
-      <li ng-repeat="result in results | filter:query" class="clearfix">
+      <li ng-repeat="result in results | filter:query | byBrand:brand" class="clearfix">
         <div class="col-md-2">
           <img class="img-responsive" ng-src="{{ result.imageUrl }}"/>
         </div>
