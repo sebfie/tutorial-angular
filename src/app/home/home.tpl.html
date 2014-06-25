@@ -24,10 +24,25 @@
       </select>
     </div>
 
-    <pre class="top10">
-      Query : {{ query }}
-      Brands : {{ brand }}
-    </pre>
+    <div class="row top10">
+      <div class="col-md-6">
+        <pre>
+          Query : {{ query }}
+          Brands : {{ brand }}
+          Example of variable : {{ example_of_watch_need_true }}
+        </pre>
+      </div>
+      <div class="col-md-6">
+        <div>
+          Events :
+          <button class="btn btn-primary" ng-click="changeExampleOfWatchNeedTrue()">Change value of variable</button>
+        </div>
+        <ul>
+          <li ng-repeat="event in events track by $index">{{ event }}</li>
+        </ul>
+      </div>
+    </div>
+
 
   </div>
 
